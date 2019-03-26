@@ -19,10 +19,10 @@ class task extends BasicTask
 
     public function test()
     {
-        $this->assertEquals(0, $this->run(0));
-        $this->assertEquals(0, $this->run(1));
-        $this->assertEquals(4, $this->run(3));
-        $this->assertEquals(8, $this->run(5));
+        $this->assertEquals(0, $this->mine(0));
+        $this->assertEquals(0, $this->mine(1));
+        $this->assertEquals(4, $this->mine(3));
+        $this->assertEquals(8, $this->mine(5));
     }
 
     public function optimal()
@@ -30,7 +30,7 @@ class task extends BasicTask
         return $n === 0 ? 0 : ($n - 1) * 2;
     }
 
-    public function run(...$params)
+    public function mine(...$params)
     {
         [$n] = func_get_args();
 

@@ -22,10 +22,10 @@ class task extends BasicTask
 
     public function test()
     {
-        $this->assertEquals("Right", $this->run("!!", "??"));
-        $this->assertEquals("Left", $this->run("!??", "?!!"));
-        $this->assertEquals("Left", $this->run("!?!!", "?!?"));
-        $this->assertEquals("Balance", $this->run("!!???!????", "??!!?!!!!!!!"));
+        $this->assertEquals("Right", $this->mine("!!", "??"));
+        $this->assertEquals("Left", $this->mine("!??", "?!!"));
+        $this->assertEquals("Left", $this->mine("!?!!", "?!?"));
+        $this->assertEquals("Balance", $this->mine("!!???!????", "??!!?!!!!!!!"));
     }
 
     public function optimal()
@@ -41,7 +41,7 @@ class task extends BasicTask
         }
     }
 
-    public function run(...$params)
+    public function mine(...$params)
     {
         [$s1, $s2] = func_get_args();
 

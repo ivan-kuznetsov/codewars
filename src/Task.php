@@ -4,7 +4,7 @@ namespace Tasks;
 
 abstract class Task
 {
-    abstract public function run(...$params);
+    abstract public function mine(...$params);
 
     abstract public function test();
 

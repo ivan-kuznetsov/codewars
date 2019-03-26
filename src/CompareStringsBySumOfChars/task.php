@@ -27,7 +27,7 @@ class task extends BasicTask
 
     public function test()
     {
-        $this->assertSame(true, $this->run("AD", "BC"));
+        $this->assertSame(true, $this->mine("AD", "BC"));
     }
 
     public function optimal()
@@ -46,7 +46,7 @@ class task extends BasicTask
           }, 0);
     }
 
-    public function run(...$params)
+    public function mine(...$params)
     {
         [$s1, $s2] = func_get_args();
         return $this->charSum($s1) == $this->charSum($s2);
