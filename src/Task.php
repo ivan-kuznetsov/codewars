@@ -15,6 +15,11 @@ abstract class Task
 
     public function assertSame($a, $b)
     {
-        echo ($a === $b) ? "It's OK" : "It's not OK";
+        echo ($a === $b) ? "It's OK" . PHP_EOL : "It's not OK" . PHP_EOL;
+    }
+
+    public function assertEquals($a, $b)
+    {
+        echo ($a == $b) ? "It's OK" . PHP_EOL : "It's not OK" . PHP_EOL;
     }
 }
