@@ -13,7 +13,6 @@ abstract class Task
 
     public function optimal()
     {
-        return;
     }
 
     public function assertSame($a, $b)

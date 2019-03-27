@@ -9,7 +9,6 @@ function playPass($s, $n)
     return reverse(changeCase(replaceDigits(shiftLetters($s, $n))));
 }
 
-
 function shiftLetters($s, $n)
 {
     $s = str_split($s);
@@ -59,12 +58,10 @@ function changeCase($s)
     return $result;
 }
 
-
 function reverse($s)
 {
     return implode(array_reverse(str_split($s)));
 }
-
 
 function getElement($array, $start, $length)
 {
@@ -80,6 +77,5 @@ function getElement($array, $start, $length)
         $length--;
     }
 }
-
 
 var_dump(playPass('MY GRANMA CAME FROM NY ON THE 23RD OF APRIL 2015', 2));

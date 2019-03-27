@@ -27,28 +27,30 @@ class task extends BasicTask
 
     public function test()
     {
-        $this->assertSame(true, $this->mine("AD", "BC"));
+        $this->assertSame(true, $this->mine('AD', 'BC'));
     }
 
     public function optimal()
     {
         if (!$a || preg_match('/[^a-z]/i', $a)) {
-            $a = "";
+            $a = '';
         }
         if (!$b || preg_match('/[^a-z]/i', $b)) {
-            $b = "";
+            $b = '';
         }
         list($a, $b) = [strtoupper($a), strtoupper($b)];
+
         return array_reduce(str_split($a), function ($s, $c) {
-              return $s + ord($c);
-          }, 0) === array_reduce(str_split($b), function ($s, $c) {
-              return $s + ord($c);
-          }, 0);
+            return $s + ord($c);
+        }, 0) === array_reduce(str_split($b), function ($s, $c) {
+            return $s + ord($c);
+        }, 0);
     }
 
     public function mine(...$params)
     {
         [$s1, $s2] = func_get_args();
+
         return $this->charSum($s1) == $this->charSum($s2);
     }
 
@@ -63,7 +65,7 @@ class task extends BasicTask
 
     protected function verify($string)
     {
-        if ($string === null || preg_match("/[^a-z]/i", $string)) {
+        if ($string === null || preg_match('/[^a-z]/i', $string)) {
             return '';
         }
 

@@ -6,7 +6,7 @@ class FunctionByOptions
 {
     public $options = [
       'a' => false,
-      'b' => true
+      'b' => true,
     ];
 
     public function callFuncByName()

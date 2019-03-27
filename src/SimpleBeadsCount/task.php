@@ -39,7 +39,5 @@ class task extends BasicTask
         }
 
         return ($n - 1) * 2;
-
     }
-
 }

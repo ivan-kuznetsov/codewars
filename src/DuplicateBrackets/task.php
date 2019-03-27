@@ -9,11 +9,9 @@ function duplicate_encode($word)
     $result = '';
 
     foreach ($chars as $char) {
-
         $count = $charCount[$char];
 
         $result .= ($count > 1) ? ')' : '(';
-
     }
 
     return $result;

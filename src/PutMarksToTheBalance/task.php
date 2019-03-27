@@ -22,22 +22,22 @@ class task extends BasicTask
 
     public function test()
     {
-        $this->assertEquals("Right", $this->mine("!!", "??"));
-        $this->assertEquals("Left", $this->mine("!??", "?!!"));
-        $this->assertEquals("Left", $this->mine("!?!!", "?!?"));
-        $this->assertEquals("Balance", $this->mine("!!???!????", "??!!?!!!!!!!"));
+        $this->assertEquals('Right', $this->mine('!!', '??'));
+        $this->assertEquals('Left', $this->mine('!??', '?!!'));
+        $this->assertEquals('Left', $this->mine('!?!!', '?!?'));
+        $this->assertEquals('Balance', $this->mine('!!???!????', '??!!?!!!!!!!'));
     }
 
     public function optimal()
     {
-        $a = substr_count($l, "!") * 2 + substr_count($l, "?") * 3;
-        $b = substr_count($r, "!") * 2 + substr_count($r, "?") * 3;
+        $a = substr_count($l, '!') * 2 + substr_count($l, '?') * 3;
+        $b = substr_count($r, '!') * 2 + substr_count($r, '?') * 3;
         if ($a == $b) {
-            return "Balance";
+            return 'Balance';
         } elseif ($a < $b) {
-            return "Right";
+            return 'Right';
         } else {
-            return "Left";
+            return 'Left';
         }
     }
 
@@ -53,7 +53,6 @@ class task extends BasicTask
             return 'Balance';
         }
     }
-
 
     public function countWeight($string)
     {

@@ -7,7 +7,6 @@ var_dump(stringComparision('abc', 'def')); //False
 var_dump(stringComparision('abc', 'ABCD')); //True
 var_dump(stringComparision('BC', 'abc')); //True
 
-
 function stringComparision($firstString, $secondString)
 {
     $firstString = str_split(strtoupper($firstString));

@@ -15,6 +15,7 @@ function fizzBuzz($number)
 
         case 3:
             return 'FizzBuzz';
+
             break;
 
         default:
