@@ -6,7 +6,10 @@ abstract class Task
 {
     abstract public function mine(...$params);
 
-    abstract public function test();
+    public function test()
+    {
+        echo PHP_EOL;
+    }
 
     public function optimal()
     {
@@ -15,11 +18,11 @@ abstract class Task
 
     public function assertSame($a, $b)
     {
-        echo ($a === $b) ? "It's OK" . PHP_EOL : "It's not OK" . PHP_EOL;
+        echo ($a === $b) ? '+' : 'F';
     }
 
     public function assertEquals($a, $b)
     {
-        echo ($a == $b) ? "It's OK" . PHP_EOL : "It's not OK" . PHP_EOL;
+        echo ($a == $b) ? '+' : 'F';
     }
 }
